@@ -14,6 +14,9 @@
         "no-param-reassign": "warn",
         "import/prefer-default-export": "off",
         "react/jsx-fragments": [2, "element"],
+        "react/jsx-filename-extension": "off",
+        "react/prop-types": "off",
+        "react/no-array-index-key": "off",
         "no-underscore-dangle": [
             "error",
             { "allow": ["_id", "__REDUX_DEVTOOLS_EXTENSION_COMPOSE__"] }

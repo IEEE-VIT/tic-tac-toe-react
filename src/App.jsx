@@ -3,7 +3,9 @@ import React from "react";
 const App = () => {
     return (
         <div className="App">
-            <h1>IEEE TIC TAC TOE!</h1>
+            {/* import landing page */}
+            {/* import play play page */}
+            {/* add routing for both files */}
         </div>
     );
 };
