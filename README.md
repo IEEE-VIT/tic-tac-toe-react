@@ -1,12 +1,27 @@
-# Hacktoberfest, 2020 with IEEE-VIT Student Branch
+<p align="center"><img width="40%" src="https://hacktoberfest.digitalocean.com/assets/HF-full-logo-b05d5eb32b3f3ecc9b2240526104cf4da3187b8b61963dd9042fdc2536e4a76c.svg"/></p>
 
-tic-tac-toe-react is a simple Tic Tac Toe Game built using React JS. This repository was created to help developers get started with Open Source during [Hacktoberfest](https://hacktoberfest.digitalocean.com/)
+# Hacktoberfest 2020 with IEEE-VIT :heart:
 
-> NOTE: Check out `issues` labelled as `Hacktoberfest` and start contributing!
+Tic-Tac-Toe-React is a simple Tic Tac Toe Game built using React JS.
 
-Made with :heart: by [IEEE-VIT](https://ieeevit.org)
+Support open source software by participating in [Hacktoberfest](https://hacktoberfest.digitalocean.com) and get goodies and a free t-shirt! :yellow_heart:
 
-## Getting started
+> Please check all issues labelled as `hacktoberfest` to start contributing!
+
+Kindly consider leaving a :star: if you like the repository and our organisation.
+
+## Getting Started
+* Fork it.
+
+* Clone your forked repo and move inside it:
+
+`git clone https://github.com/<your-github-username>/<repo-name>.git && cd <repo-name>`
+
+* Checkout to a new branch to work on an issue:
+
+`git checkout -b my-amazing-feature`
+
+* Setup
 
 1. To setup this project, simply run the following command:
 
@@ -24,6 +39,27 @@ It should create a `node_modules` folder, and you're good to go! :)
 $ yarn start
 ```
 
+* Once you're all done coding, it's time to open a PR :)
+Run the following commands from the root of the project directory:
+
+`git add .`
+
+`git commit -m "A short description about the feature."`
+
+`git push origin <my-amazing-feature>`
+
+Open your forked repo in your browser and then raise a PR to the `master` branch of this repository!
+
+
+
 ## Contributing
 
-To start contributing, check out [CONTRIBUTING.md](https://github.com/IEEE-VIT/tic-tac-toe-react/blob/master/CONTRIBUTING.md). New contributors are always welcome to support this project. Check out issues labelled as `Hacktoberfest` if you are up for some grabs! :)
+To start contributing, check out [CONTRIBUTING.md](https://github.com/r-ush/tic-tac-toe-react/blob/master/CONTRIBUTING.md). New contributors are always welcome to support this project. If you want something gentle to start with, check out issues labelled as `easy` or `good-first-issue`. Check out issues labelled as `hacktoberfest` if you are up for some grabs! :) 
+
+## License
+
+This project is licensed under [MIT](https://github.com/r-ush/tic-tac-toe-react/blob/master/LICENSE.md)
+
+
+
+
