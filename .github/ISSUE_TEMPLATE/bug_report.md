@@ -1,31 +1,27 @@
 ---
 name: Bug report
 about: Create a report to help us improve
+title: ""
+labels: ""
+assignees: ""
 ---
 
-<!-- Please search existing issues to avoid creating duplicates. -->
+**Describe the bug**
+A clear and concise description of what the bug is.
 
-# Bug Report
+**To Reproduce**
+Steps to reproduce the behavior:
 
-Bug: Not so Awesome Bug Title
+1. Go to '...'
+2. Click on '....'
+3. Scroll down to '....'
+4. See error
 
-## Description
+**Expected behavior**
+A clear and concise description of what you expected to happen.
 
-Info about the bug goes here.
+**Screenshots (Optional)**
+If applicable, add screenshots to help explain your problem.
 
-### Steps to Reproduce
-
-1. Step 1
-2. Step 2
-
-### Expected Result
-
-The expected result was...
-
-You may write the expected result or add a screenshot.
-
-### Actual Results
-
-The actual result was...
-
-Would be awesome to link screenshots here and/or error messages received.
+**Additional context (Optional)**
+Add any other context about the problem here.
