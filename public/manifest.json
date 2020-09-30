@@ -1,6 +1,6 @@
 {
-    "short_name": "My React App",
-    "name": "My template react app",
+    "short_name": "Tic Tac Toe",
+    "name": "IEEE-VIT - Tic Tac Toe",
     "icons": [
         {
             "src": "favicon.ico",
