@@ -16,7 +16,7 @@ Kindly consider leaving a :star: if you like the repository and our organisation
 
 -   Clone your forked repo and move inside it:
 
-`git clone https://github.com/IEEE-VIT/tic-tac-toe-react && cd tic-tac-toe-react`
+`git clone https://github.com/IEEE-VIT/tic-tac-toe-react.git && cd tic-tac-toe-react`
 
 -   Checkout to a new branch to work on an issue:
 
