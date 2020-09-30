@@ -7,11 +7,7 @@ import "./Board.css";
 
 const Board = () => (
     // pass onClick prop function to every square
-    <div>
-        {/* use a function that will map squares to form a board */}
-
-        {}
-    </div>
+    <div>{/* use a function that will map squares to form a board */}</div>
 );
 
 export default Board;
