@@ -1,14 +1,9 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React from "react";
 import "./GamePage.css";
 
 const GamePage = () => {
-    const [board, setBoard] = useState(Array(9).fill(null));
     // setState of who is the next play x or o
-    const xIsNext = null;
-
-    // declare a winner as the function in helper.js
-    const winner = null;
 
     const handleClick = () => {
         // this will be the onClick for board componenet
@@ -26,9 +21,7 @@ const GamePage = () => {
 
             <div>
                 <h1>
-                    {winner
-                        ? `We have a Winner ${winner}`
-                        : `Next Move ${xIsNext ? "X" : "O"}`}
+                    {/* Logic for declaring the winner or determining the next move */}
                 </h1>
             </div>
         </div>

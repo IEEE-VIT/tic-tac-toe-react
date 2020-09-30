@@ -2,13 +2,10 @@
 import React from "react";
 import "./Square.css";
 
-const style = {
-    cursor: "pointer",
-};
 
-const Square = ({ value, onClick }) => (
-    // add function prop onClick as onClick to button
-    <button type="button" style={style}>
+const Square = () => (
+    // add function prop 
+    <button type="button">
         {/* display prop value */}
     </button>
 );
