@@ -1,65 +1,29 @@
-## Template repo for React
+# Hacktoberfest, 2020 with IEEE-VIT Student Branch
 
-Made for ease of access in starting a react app, the config takes around 15-20 mins everytime! This will help avoid that.
+tic-tac-toe-react is a simple Tic Tac Toe Game built using React JS. This repository was created to help developers get started with Open Source during [Hacktoberfest](https://hacktoberfest.digitalocean.com/)
 
-## Packages Installed
+> NOTE: Check out `issues` labelled as `Hacktoberfest` and start contributing!
 
-It has the following packages pre-installed
-- All packages with Create-React-App
-- React-router-dom
-- Prettier
-- Husky
-- Lint-Staged
-- All plugins for React, Lint, Prettier and Husky.
+Made with :heart: by [IEEE-VIT](https://ieeevit.org)
 
-All Dependencies- 
-    <pre>
-    "dependencies": {
-      "@testing-library/jest-dom": "^4.2.4",
-      "@testing-library/react": "^9.3.2",
-      "@testing-library/user-event": "^7.1.2",
-      "react": "^16.13.1",
-      "react-dom": "^16.13.1",
-      "react-scripts": "3.4.1",
-      "react-router-dom": "^5.2.0"
-    }
-    </pre>
-    <pre>
-    "devDependencies": {
-      "eslint-config-airbnb": "^18.2.0",
-      "eslint-config-prettier": "^6.11.0",
-      "eslint-plugin-import": "^2.22.0",
-      "eslint-plugin-jsx-a11y": "^6.3.1",
-      "eslint-plugin-prettier": "^3.1.4",
-      "eslint-plugin-react": "^7.20.3",
-      "husky": "^4.2.5",
-      "lint-staged": "^10.2.11",
-      "prettier": "^2.0.5"
-    }
-    </pre>
+## Getting started
 
-## GitHub Templates
-It also includes PR and Issue templates for github.
-Refer to the article for guidelines about the github templates I have used.
+1. To setup this project, simply run the following command:
 
-[Github workflow blog from dev.to](https://dev.to/jorenrui/a-look-into-how-i-manage-my-personal-projects-my-git-github-workflow-1e7h)
+```bash
+$ yarn install
+```
 
-## Available Scripts
+It should create a `node_modules` folder, and you're good to go! :)
 
-In the project directory, you can run:
+2. All the components are setup inside `tic-tac-toe/src/components`. Most of your code should go there.
 
-### `yarn start`
+3. To start the project, simply run the following command:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+$ yarn start
+```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Contributing
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+To start contributing, check out [CONTRIBUTING.md](https://github.com/IEEE-VIT/tic-tac-toe-react/blob/master/CONTRIBUTING.md). New contributors are always welcome to support this project. Check out issues labelled as `Hacktoberfest` if you are up for some grabs! :)
