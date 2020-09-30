@@ -1,5 +1,6 @@
 /* eslint-disable  */
 import React from "react";
+import "./Square.css";
 
 const style = {
     cursor: "pointer",

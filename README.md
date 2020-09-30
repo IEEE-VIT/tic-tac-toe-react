@@ -11,22 +11,29 @@ Support open source software by participating in [Hacktoberfest](https://hacktob
 Kindly consider leaving a :star: if you like the repository and our organisation.
 
 ## Getting Started
-* Fork it.
 
-* Clone your forked repo and move inside it:
+-   Fork it.
+
+-   Clone your forked repo and move inside it:
 
 `git clone https://github.com/<your-github-username>/<repo-name>.git && cd <repo-name>`
 
-* Checkout to a new branch to work on an issue:
+-   Checkout to a new branch to work on an issue:
 
 `git checkout -b my-amazing-feature`
 
-* Setup
+-   Setup
 
 1. To setup this project, simply run the following command:
 
 ```bash
 $ yarn install
+```
+
+or
+
+```bash
+$ npm install
 ```
 
 It should create a `node_modules` folder, and you're good to go! :)
@@ -39,8 +46,14 @@ It should create a `node_modules` folder, and you're good to go! :)
 $ yarn start
 ```
 
-* Once you're all done coding, it's time to open a PR :)
-Run the following commands from the root of the project directory:
+or
+
+```bash
+$ npm start
+```
+
+-   Once you're all done coding, it's time to open a PR :)
+    Run the following commands from the root of the project directory:
 
 `git add .`
 
@@ -50,16 +63,10 @@ Run the following commands from the root of the project directory:
 
 Open your forked repo in your browser and then raise a PR to the `master` branch of this repository!
 
-
-
 ## Contributing
 
-To start contributing, check out [CONTRIBUTING.md](https://github.com/r-ush/tic-tac-toe-react/blob/master/CONTRIBUTING.md). New contributors are always welcome to support this project. If you want something gentle to start with, check out issues labelled as `easy` or `good-first-issue`. Check out issues labelled as `hacktoberfest` if you are up for some grabs! :) 
+To start contributing, check out [CONTRIBUTING.md](https://github.com/r-ush/tic-tac-toe-react/blob/master/CONTRIBUTING.md). New contributors are always welcome to support this project. If you want something gentle to start with, check out issues labelled as `easy` or `good-first-issue`. Check out issues labelled as `hacktoberfest` if you are up for some grabs! :)
 
 ## License
 
 This project is licensed under [MIT](https://github.com/r-ush/tic-tac-toe-react/blob/master/LICENSE.md)
-
-
-
-

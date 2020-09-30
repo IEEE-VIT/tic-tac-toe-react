@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
+import "./GamePage.css";
 
 const GamePage = () => {
     const [board, setBoard] = useState(Array(9).fill(null));
