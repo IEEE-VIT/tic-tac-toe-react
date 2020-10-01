@@ -1,3 +1,4 @@
+/* eslint-disable  */
 import React from "react";
 import "./Board.css";
 
@@ -5,9 +6,25 @@ import "./Board.css";
 
 // take props from parent
 
-const Board = () => (
+const DummySquare = ({ value = "X", handleClick }) => (
+    <div className="square" onClick={handleClick}>
+        {value}
+    </div>
+);
+const dummyHandleOnClick = () => alert("Clicked!");
+const dummyBoard = Array(9).fill("X");
+
+const Board = ({ board = dummyBoard, handleClick = dummyHandleOnClick }) => (
     // pass onClick prop function to every square
-    <div>{/* use a function that will map squares to form a board */}</div>
+    // use a function that will map squares to form a board
+
+    // `handleClick` and `board` props will come from Game Page component
+    // TODO:
+    // - replace dummy props and dummy square component
+    // - added some initial styles that will probably need to change later
+    <div className="board">
+        {board.map((value, idx) => <DummySquare key={idx} value={value} handleClick={handleClick} />)}
+    </div>
 );
 
 export default Board;

@@ -1,0 +1,12 @@
+.board {
+    display: grid;
+    grid-template-columns: 125px 125px 125px;
+    grid-template-rows: 125px 125px 125px;
+}
+
+.square {
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
