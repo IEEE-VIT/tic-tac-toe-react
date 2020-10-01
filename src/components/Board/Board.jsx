@@ -11,10 +11,10 @@ const DummySquare = ({ value = "X", handleClick }) => (
         {value}
     </div>
 );
-const dummyHandleOnClick = () => alert("Clicked!");
+const dummyHandleClick = () => alert("Clicked!");
 const dummyBoard = Array(9).fill("X");
 
-const Board = ({ board = dummyBoard, handleClick = dummyHandleOnClick }) => (
+const Board = ({ board = dummyBoard, handleClick = dummyHandleClick }) => (
     // pass onClick prop function to every square
     // use a function that will map squares to form a board
 
