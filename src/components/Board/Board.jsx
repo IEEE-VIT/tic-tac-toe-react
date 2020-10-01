@@ -7,7 +7,7 @@ import "./Board.css";
 // take props from parent
 
 const DummySquare = ({ value = "X", handleClick }) => (
-    <div className="square" onClick={handleClick}>
+    <div className="square-dummy-square" onClick={handleClick}>
         {value}
     </div>
 );
@@ -22,7 +22,7 @@ const Board = ({ board = dummyBoard, handleClick = dummyHandleClick }) => (
     // TODO:
     // - replace dummy props and dummy square component
     // - added some initial styles that will probably need to change later
-    <div className="board">
+    <div className="board-board">
         {board.map((value, idx) => <DummySquare key={idx} value={value} handleClick={handleClick} />)}
     </div>
 );
