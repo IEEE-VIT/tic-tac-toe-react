@@ -1,0 +1,45 @@
+.landing {
+    background: #313234;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__img {
+        width: 30%;
+    }
+
+    &__heading {
+        font-family: "Lato", sans-serif;
+        color: white;
+        font-size: 3rem;
+        margin-top: 3rem;
+    }
+
+    &__form {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__input {
+            width: 100%;
+        }
+
+        &__submit {
+            border: none;
+            outline: none;
+            padding: 0.7rem 2rem;
+            border-radius: 10rem;
+            font-size: 1.25rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}

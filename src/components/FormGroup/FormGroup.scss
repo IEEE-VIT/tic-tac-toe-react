@@ -1,0 +1,23 @@
+.form-group {
+    width: 100%;
+    color: white;
+    margin: 1.5rem 0;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__label {
+        margin-right: 2rem;
+    }
+
+    &__input {
+        outline: none;
+        border: none;
+        border-radius: 0;
+        width: 40%;
+        color: white;
+        background: transparent;
+        border-bottom: 1px solid white;
+    }
+}
