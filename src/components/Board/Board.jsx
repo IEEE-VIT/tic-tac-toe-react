@@ -1,30 +1,87 @@
-/* eslint-disable  */
-import React from "react";
+/* eslint-disable no-unused-vars */
+import React, { useState, useEffect, useRef } from "react";
+import { useHistory } from "react-router-dom";
+import Square from "../Square/Square";
+import { calculateWinner } from "../../utils/helpers";
 import "./Board.css";
 
-// import Square from "../Square/Square";
+const Board = () => {
+    // prettier-ignore
+    const emptyBoard = [null, null, null, null, null, null, null, null, null];
+    const history = useHistory();
+    const [player, setPlayer] = useState("X");
+    const [winner, setWinner] = useState(null);
+    const [ctr, setCtr] = useState(0);
+    const [board, setBoard] = useState(emptyBoard);
 
-// take props from parent
+    const togglePlayer = () =>
+        player === "X" ? setPlayer("O") : setPlayer("X");
 
-const DummySquare = ({ value = "X", handleClick }) => (
-    <div className="square-dummy-square" onClick={handleClick}>
-        {value}
-    </div>
-);
-const dummyHandleClick = () => alert("Clicked!");
-const dummyBoard = Array(9).fill("X");
+    const mutateBoard = (e, index) => {
+        const newBoard = [...board];
+        if (!winner && !newBoard[index]) {
+            newBoard[index] = player;
+            togglePlayer();
+            setCtr(ctr + 1);
+            setBoard(newBoard);
+        }
+    };
 
-const Board = ({ board = dummyBoard, handleClick = dummyHandleClick }) => (
-    // pass onClick prop function to every square
-    // use a function that will map squares to form a board
+    const resetBoard = () => {
+        setBoard(emptyBoard);
+        setPlayer("X");
+        setWinner(null);
+        setCtr(0);
+    };
 
-    // `handleClick` and `board` props will come from Game Page component
-    // TODO:
-    // - replace dummy props and dummy square component
-    // - added some initial styles that will probably need to change later
-    <div className="board-board">
-        {board.map((value, idx) => <DummySquare key={idx} value={value} handleClick={handleClick} />)}
-    </div>
-);
+    const mounted = useRef();
+    useEffect(() => {
+        if (!mounted.current) {
+            // do componentDidMount logic
+            mounted.current = true;
+        } else {
+            // do componentDidUpdate logic
+            const winPlayer = calculateWinner(board);
+            if (winner !== "No one")
+                setWinner(winPlayer === "None" ? null : winPlayer);
+            if (!winner && ctr === 9) setWinner("No one");
+        }
+    });
+
+    const winPrompt = winner ? (
+        <div className="board__winner">
+            <div className="board__winner--msg">{winner} has won the game!</div>
+            <div className="board__winner--choice">
+                Would you like to have another go?
+                <button
+                    type="button"
+                    className="board__btn"
+                    onClick={() => resetBoard()}
+                >
+                    Yes
+                </button>
+                <button
+                    type="button"
+                    className="board__btn"
+                    onClick={() => history.push("/")}
+                >
+                    No
+                </button>
+            </div>
+        </div>
+    ) : null;
+    return (
+        <div className="board">
+            {board.map((val, index) => (
+                <Square
+                    val={val}
+                    onClick={(e) => mutateBoard(e, index)}
+                    key={`sq${index}`}
+                />
+            ))}
+            {winPrompt}
+        </div>
+    );
+};
 
 export default Board;

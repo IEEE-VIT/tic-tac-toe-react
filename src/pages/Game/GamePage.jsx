@@ -1,29 +1,19 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import "./GamePage.css";
+import { useSelector } from "react-redux";
+import Board from "../../components/Board/Board";
+import "./GamePage.scss";
 
 const GamePage = () => {
-    // setState of who is the next play x or o
-
-    const handleClick = () => {
-        // this will be the onClick for board componenet
-        // Copy board
-        // like :>> const boardCopy = [...board];
-        // add logic to change the turn of player
-        // set board
-        // set next player
-    };
+    const { player1, player2 } = useSelector((state) => state.players);
 
     return (
-        <div>
-            <h1>IEEE-VIT&apos;s Tic Tac Toe!</h1>
-            {/* add board component and pass prop board */}
-
-            <div>
-                <h1>
-                    {/* Logic for declaring the winner or determining the next move */}
-                </h1>
+        <div className="game">
+            <div className="game__heading">Let&apos;s Play Tic-Tac-Toe!</div>
+            <div className="board__players">
+                {player1} (Player 1) V/s {player2} (Player 2)
             </div>
+            <Board />
         </div>
     );
 };
