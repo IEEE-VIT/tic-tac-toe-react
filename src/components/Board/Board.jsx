@@ -13,6 +13,7 @@ const Board = () => {
     const [winner, setWinner] = useState(null);
     const [ctr, setCtr] = useState(0);
     const [board, setBoard] = useState(emptyBoard);
+    const turn = player === "X" ? "Player 1" : "Player 2";
 
     const togglePlayer = () =>
         player === "X" ? setPlayer("O") : setPlayer("X");
@@ -72,13 +73,16 @@ const Board = () => {
     ) : null;
     return (
         <div className="board">
-            {board.map((val, index) => (
-                <Square
-                    val={val}
-                    onClick={(e) => mutateBoard(e, index)}
-                    key={`sq${index}`}
-                />
-            ))}
+            <div className="board__current">Current turn: {turn}</div>
+            <div className="board__square-grp">
+                {board.map((val, index) => (
+                    <Square
+                        val={val}
+                        onClick={(e) => mutateBoard(e, index)}
+                        key={`sq${index}`}
+                    />
+                ))}
+            </div>
             {winPrompt}
         </div>
     );

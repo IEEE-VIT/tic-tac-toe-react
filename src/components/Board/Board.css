@@ -1,4 +1,7 @@
 .board {
+}
+
+.board__square-grp {
     display: grid;
     grid-template-columns: 125px 125px 125px;
     grid-template-rows: 125px 125px 125px;

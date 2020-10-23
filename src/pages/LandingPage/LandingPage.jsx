@@ -19,11 +19,17 @@ const LandingPage = () => {
     };
 
     return (
-        <div>
-            IEEE-VIT&apos;s Tic Tac Toe!
+        <div className="landing">
+            <div className="landing__heading">IEEE-VIT&apos;s Tic Tac Toe!</div>
             {/* use two input boxes to enter player names */}
-            {/* A start button to take you to the playing page */}
             {/* add styling */}
+            <button
+                type="button"
+                className="landing__btn"
+                onClick={() => history.push("/game")}
+            >
+                Let&apos;s Play!
+            </button>
         </div>
     );
 };

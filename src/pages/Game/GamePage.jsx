@@ -2,7 +2,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import Board from "../../components/Board/Board";
-import "./GamePage.scss";
+import "./GamePage.css";
 
 const GamePage = () => {
     const { player1, player2 } = useSelector((state) => state.players);
@@ -10,7 +10,7 @@ const GamePage = () => {
     return (
         <div className="game">
             <div className="game__heading">Let&apos;s Play Tic-Tac-Toe!</div>
-            <div className="board__players">
+            <div className="game__players">
                 {player1} (Player 1) V/s {player2} (Player 2)
             </div>
             <Board />
