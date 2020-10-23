@@ -59,7 +59,7 @@ export const calculateWinner = (arr) => {
     return winNone;
 };
 
-// eslint-disable-next-line prettier/prettier
+// prettier-ignore
 const squares = [
     "O", null, null,
     "X", "X", "O",

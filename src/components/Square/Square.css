@@ -1,14 +1,23 @@
 .square {
     width: 7rem;
     height: 7rem;
-    background-color: #18108b;
-    transition: background-color 200ms;
-    border: 0;
+    background-color: #eee;
+    border: 1px solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    color: white;
+    color: black;
     font-size: 3rem;
+    transition: all 0.3s ease;
 }
 
 .square:hover {
-    background-color: #130b81;
+    background-color: #ddd;
+    border: 1px solid #bbb;
+}
+
+.square__img {
+    max-width: 100%;
+    max-height: fit-content;
 }
