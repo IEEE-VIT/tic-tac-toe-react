@@ -23,6 +23,24 @@ const LandingPage = () => {
             <div className="landing__heading">IEEE-VIT&apos;s Tic Tac Toe!</div>
             {/* use two input boxes to enter player names */}
             {/* add styling */}
+            <img
+                className="image"
+                src="/my-app/src/assets/circle.svg"
+                alt=""
+                height="100px"
+                width="100px"
+            />
+            <img
+                className="image"
+                src="/my-app/src/assets/cross.svg"
+                alt=""
+                height="100px"
+                width="100px"
+            />
+            <div>
+                <input className="player_1" type="text" />
+                <input className="player_2" type="text" />
+            </div>
             <button
                 type="button"
                 className="landing__btn"

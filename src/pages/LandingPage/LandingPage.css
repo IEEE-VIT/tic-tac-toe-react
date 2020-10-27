@@ -1,0 +1,56 @@
+.landing {
+    background-color: #5e54ac;
+    height: 100vh;
+}
+
+.landing__heading {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    margin-top: 0px;
+    color: aliceblue;
+    font-size: 50px;
+}
+
+.image {
+    display: inline-block;
+    margin: 30px;
+    padding-top: 30px;
+    fill: #fff;
+}
+
+.player_1 {
+    margin: 30px;
+    border-style: none;
+    background-color: #5e54ac;
+    border-bottom: 3px solid #fff;
+    outline: none;
+    font-size: 30px;
+    text-align: right;
+    color: #fff;
+}
+
+.player_2 {
+    margin: 30px;
+    border-style: none;
+    background-color: #5e54ac;
+    border-bottom: 3px solid #fff;
+    outline: none;
+    font-size: 30px;
+    color: #fff;
+}
+
+.landing__btn {
+    border-radius: 30px;
+    margin-top: 60px;
+    padding: 5px;
+    color: #5e54ac;
+    font-size: 30px;
+    background-color: #fdfdfd;
+    border-style: none;
+    width: 300px;
+    height: 50px;
+}
+
+.loading__btn:hover {
+    background-color: #888888;
+}
