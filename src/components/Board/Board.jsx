@@ -87,6 +87,14 @@ const Board = () => {
     return (
         <div className="board">
             <div className="board__current">Current turn: {turn}</div>
+
+<button
+    type="button"
+    className="board__restart-btn"
+    onClick={resetBoard}
+>
+    Restart
+</button>
             <div className="board__square-grp">
                 {board.map((val, index) => (
                     <Square

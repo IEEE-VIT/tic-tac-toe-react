@@ -9,3 +9,17 @@
 .board__winner--draw {
     color: orange;
 }
+.board__restart-btn {
+    margin: 15px 0;
+    padding: 10px 20px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.board__restart-btn:hover {
+    background-color: #1d4ed8;
+}
