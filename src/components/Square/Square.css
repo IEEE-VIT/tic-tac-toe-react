@@ -21,3 +21,13 @@
     max-width: 100%;
     max-height: fit-content;
 }
+
+.square--highlight {
+    background-color: #a5d6a7;
+    border: 1px solid #4caf50;
+}
+
+.square--highlight:hover {
+    background-color: #93c895;
+    border: 1px solid #4caf50;
+}
