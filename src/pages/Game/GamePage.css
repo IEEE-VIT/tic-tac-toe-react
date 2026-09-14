@@ -1,0 +1,18 @@
+.game {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.game__heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.game__players {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}

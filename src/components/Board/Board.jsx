@@ -14,6 +14,7 @@ const Board = () => {
     const dispatch = useDispatch();
     const [player, setPlayer] = useState("X");
     const [winner, setWinner] = useState(null);
+    const [winningLine, setWinningLine] = useState(null);
     const [ctr, setCtr] = useState(0);
     const [board, setBoard] = useState(emptyBoard);
     const turn = player === "X" ? "Player 1" : "Player 2";
@@ -35,6 +36,7 @@ const Board = () => {
         setBoard(emptyBoard);
         setPlayer("X");
         setWinner(null);
+        setWinningLine(null);
         setCtr(0);
     };
 
@@ -45,9 +47,13 @@ const Board = () => {
             mounted.current = true;
         } else {
             // do componentDidUpdate logic
-            const winPlayer = calculateWinner(board);
-            if (winner !== "No one")
+            const { winner: winPlayer, winningLine: line } = calculateWinner(
+                board
+            );
+            if (winner !== "No one") {
                 setWinner(winPlayer === "None" ? null : winPlayer);
+                setWinningLine(winPlayer === "None" ? null : line);
+            }
             if (winPlayer === "None" && ctr === 9) setWinner("No one");
         }
     });
@@ -60,7 +66,9 @@ const Board = () => {
 
     const winPrompt = winner ? (
         <div className="board__winner">
-            <div className="board__winner--msg">{winner} has won the game!</div>
+            <div className="board__winner--msg">
+                {winner === "No one" ? "It's a draw!" : `${winner} has won the game!`}
+            </div>
             <div className="board__winner--choice">
                 Would you like to have another go?
                 <button
@@ -83,11 +91,21 @@ const Board = () => {
     return (
         <div className="board">
             <div className="board__current">Current turn: {turn}</div>
+            <button
+                type="button"
+                className="board__restart-btn"
+                onClick={() => resetBoard()}
+            >
+                Restart
+            </button>
             <div className="board__square-grp">
                 {board.map((val, index) => (
                     <Square
                         val={val}
                         onClick={(e) => mutateBoard(e, index)}
+                        isWinningSquare={Boolean(
+                            winningLine && winningLine.includes(index)
+                        )}
                         key={`sq${index}`}
                     />
                 ))}
