@@ -11,6 +11,7 @@ const Board = () => {
     const history = useHistory();
     const [player, setPlayer] = useState("X");
     const [winner, setWinner] = useState(null);
+    const [winningLine, setWinningLine] = useState(null);
     const [ctr, setCtr] = useState(0);
     const [board, setBoard] = useState(emptyBoard);
     const turn = player === "X" ? "Player 1" : "Player 2";
@@ -32,6 +33,7 @@ const Board = () => {
         setBoard(emptyBoard);
         setPlayer("X");
         setWinner(null);
+        setWinningLine(null);
         setCtr(0);
     };
 
@@ -42,9 +44,13 @@ const Board = () => {
             mounted.current = true;
         } else {
             // do componentDidUpdate logic
-            const winPlayer = calculateWinner(board);
-            if (winner !== "No one")
+            const { winner: winPlayer, winningLine: line } = calculateWinner(
+                board
+            );
+            if (winner !== "No one") {
                 setWinner(winPlayer === "None" ? null : winPlayer);
+                setWinningLine(winPlayer === "None" ? null : line);
+            }
             if (!winner && ctr === 9) setWinner("No one");
         }
     });
@@ -86,6 +92,9 @@ const Board = () => {
                     <Square
                         val={val}
                         onClick={(e) => mutateBoard(e, index)}
+                        isWinningSquare={Boolean(
+                            winningLine && winningLine.includes(index)
+                        )}
                         key={`sq${index}`}
                     />
                 ))}
