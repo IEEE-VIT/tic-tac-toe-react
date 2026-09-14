@@ -6,6 +6,7 @@
     grid-template-columns: 125px 125px 125px;
     grid-template-rows: 125px 125px 125px;
 }
+<<<<<<< HEAD
 .board__winner--draw {
     color: orange;
 }
@@ -23,3 +24,5 @@
 .board__restart-btn:hover {
     background-color: #1d4ed8;
 }
+=======
+>>>>>>> parent of b81def9 (Its a Draw!)
