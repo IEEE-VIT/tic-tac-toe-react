@@ -57,7 +57,9 @@ const Board = () => {
 
     const winPrompt = winner ? (
         <div className="board__winner">
-            <div className="board__winner--msg">{winner} has won the game!</div>
+            <div className="board__winner--msg">
+                {winner === "No one" ? "It's a draw!" : `${winner} has won the game!`}
+            </div>
             <div className="board__winner--choice">
                 Would you like to have another go?
                 <button
