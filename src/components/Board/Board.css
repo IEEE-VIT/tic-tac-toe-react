@@ -6,3 +6,6 @@
     grid-template-columns: 125px 125px 125px;
     grid-template-rows: 125px 125px 125px;
 }
+.board__winner--draw {
+    color: orange;
+}
