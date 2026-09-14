@@ -14,5 +14,34 @@
 
 .game__players {
     font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.game__scoreboard {
+    min-width: 220px;
+    padding: 1rem 1.25rem;
     margin-bottom: 1.5rem;
+    border: 1px solid #dfe3e8;
+    border-radius: 8px;
+    background: #f7f9fa;
+}
+
+.game__scoreboard--title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.game__scoreboard--row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.35rem 0;
+    font-size: 1.05rem;
+}
+
+.game__scoreboard--row strong {
+    font-size: 1.2rem;
 }

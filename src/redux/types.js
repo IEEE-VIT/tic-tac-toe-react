@@ -1,3 +1,4 @@
 export const TYPE_EXAMPLE = "TYPE_EXAMPLE";
 
 export const SET_USERNAMES = "SET_USERNAMES";
+export const SET_SCOREBOARD = "SET_SCOREBOARD";

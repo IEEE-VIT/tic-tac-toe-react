@@ -1,8 +1,12 @@
-import { SET_USERNAMES } from "../types";
+import { SET_USERNAMES, SET_SCOREBOARD } from "../types";
 
 const initialState = {
     player1: null,
     player2: null,
+    score: {
+        player1: 0,
+        player2: 0,
+    },
 };
 
 export default function (state = initialState, action) {
@@ -11,6 +15,15 @@ export default function (state = initialState, action) {
             return {
                 ...state,
                 ...action.payload,
+            };
+
+        case SET_SCOREBOARD:
+            return {
+                ...state,
+                score: {
+                    ...state.score,
+                    ...action.payload,
+                },
             };
 
         default:
