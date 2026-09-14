@@ -22,3 +22,13 @@
 .board__restart-btn:hover {
     background-color: #666;
 }
+
+.board__winner--draw {
+    margin-top: 12px;
+    padding: 10px 14px;
+    color: #704600;
+    background-color: #fff4d6;
+    border-left: 4px solid #b77900;
+    border-radius: 4px;
+    font-weight: 600;
+}
