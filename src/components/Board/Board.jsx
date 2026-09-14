@@ -1,14 +1,17 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect, useRef } from "react";
+import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import Square from "../Square/Square";
 import { calculateWinner } from "../../utils/helpers";
+import { incrementScore } from "../../redux/actions/Players Actions";
 import "./Board.css";
 
 const Board = () => {
     // prettier-ignore
     const emptyBoard = [null, null, null, null, null, null, null, null, null];
     const history = useHistory();
+    const dispatch = useDispatch();
     const [player, setPlayer] = useState("X");
     const [winner, setWinner] = useState(null);
     const [ctr, setCtr] = useState(0);
@@ -45,9 +48,15 @@ const Board = () => {
             const winPlayer = calculateWinner(board);
             if (winner !== "No one")
                 setWinner(winPlayer === "None" ? null : winPlayer);
-            if (!winner && ctr === 9) setWinner("No one");
+            if (winPlayer === "None" && ctr === 9) setWinner("No one");
         }
     });
+
+    // runs once per round, when winner changes from null to a player
+    useEffect(() => {
+        if (winner === "Player 1" || winner === "Player 2")
+            dispatch(incrementScore(winner));
+    }, [winner, dispatch]);
 
     const winPrompt = winner ? (
         <div className="board__winner">

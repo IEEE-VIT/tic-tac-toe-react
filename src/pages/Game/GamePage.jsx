@@ -5,13 +5,18 @@ import Board from "../../components/Board/Board";
 import "./GamePage.css";
 
 const GamePage = () => {
-    const { player1, player2 } = useSelector((state) => state.players);
+    const { player1, player2, player1Score, player2Score } = useSelector(
+        (state) => state.players
+    );
 
     return (
         <div className="game">
             <div className="game__heading">Let&apos;s Play Tic-Tac-Toe!</div>
             <div className="game__players">
                 {player1} (Player 1) V/s {player2} (Player 2)
+            </div>
+            <div className="game__score">
+                Player 1: {player1Score} — Player 2: {player2Score}
             </div>
             <Board />
         </div>

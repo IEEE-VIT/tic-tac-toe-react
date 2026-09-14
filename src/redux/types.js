@@ -1,3 +1,5 @@
 export const TYPE_EXAMPLE = "TYPE_EXAMPLE";
 
 export const SET_USERNAMES = "SET_USERNAMES";
+
+export const INCREMENT_SCORE = "INCREMENT_SCORE";
