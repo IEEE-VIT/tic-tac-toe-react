@@ -6,7 +6,6 @@ import { calculateWinner } from "../../utils/helpers";
 import "./Board.css";
 
 const Board = () => {
-    // prettier-ignore
     const emptyBoard = [null, null, null, null, null, null, null, null, null];
     const history = useHistory();
     const [player, setPlayer] = useState("X");
@@ -38,10 +37,8 @@ const Board = () => {
     const mounted = useRef();
     useEffect(() => {
         if (!mounted.current) {
-            // do componentDidMount logic
             mounted.current = true;
         } else {
-            // do componentDidUpdate logic
             const winPlayer = calculateWinner(board);
             if (winner !== "No one")
                 setWinner(winPlayer === "None" ? null : winPlayer);
@@ -71,6 +68,7 @@ const Board = () => {
             </div>
         </div>
     ) : null;
+
     return (
         <div className="board">
             <div className="board__current">Current turn: {turn}</div>
@@ -83,6 +81,16 @@ const Board = () => {
                     />
                 ))}
             </div>
+            
+            {/* Added Active Gameplay Restart Button */}
+            <button
+                type="button"
+                className="board__restart-btn"
+                onClick={resetBoard}
+            >
+                Restart Game
+            </button>
+
             {winPrompt}
         </div>
     );
