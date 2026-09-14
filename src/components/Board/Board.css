@@ -22,3 +22,53 @@
 .board__restart-btn:hover {
     background-color: #666;
 }
+
+.board__winner {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.board__winner--msg {
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.board__winner--win {
+    color: #1f7a1f;
+}
+
+.board__winner--draw {
+    color: #b7791f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.board__winner--draw::before {
+    content: "⚑";
+    font-size: 1.5rem;
+}
+
+.board__winner--choice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.board__btn {
+    margin-left: 8px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #444;
+    color: #fff;
+    cursor: pointer;
+}
+
+.board__btn:hover {
+    background-color: #666;
+}
